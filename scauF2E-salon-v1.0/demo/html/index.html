@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>需求系统</title>
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/index.css" type="text/css" media="all">
+	<script charset="gb2312" src="http://res.nie.netease.com/comm/js/jquery(mixNIE).last.js"></script>
+	<script src="js/angular.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h2 class="pageTitle">网站组提单系统</h2>
+		<div class="well"> 
+			<form method="post"  class="form-horizontal indexLogin" id="loginForm"> 
+				<div class="alert alert-info">请使用<strong>公司邮箱</strong>登录！</div>
+				<div class="control-group"> 
+					<label for="G_user" class="control-label"><i class="icon-user"></i></label> 
+					<div class="controls"><input id="G_user" type="text" placeholder="邮箱" name="username"><span class="add-on">@corp.netease.com</span></div> 
+				</div> 
+				<div class="control-group"> 
+					<label for="G_pwd" class="control-label"><i class="icon-lock"></i></label> 
+					<div class="controls"><input id="G_pwd" type="password" placeholder="密码" name="pwd"></div> 
+				</div> 	 
+				<div class="control-group"> 
+					<div class="controls"> 
+						<button type="submit" class="btn btn-success" id="login">登陆</button> 
+					</div> 
+				</div> 
+			</form> 
+			<p class="indexAdvise"><a href="#"><i class=" icon-edit"></i>我要提意见</a></p> 
+		</div>
+	</div>
+</body>
+<script>
+var topH=document.documentElement.scrollTop+$("body").scrollTop();
+$(".container").css("margin-top",($(window).height()-$(".container").height())/2);
+
+$(window).resize(function(){
+    $(".container").stop().animate({ 
+      	"margin-top":($(window).height()-$(".container").height())/2
+    });  
+  })
+$("#login").click(function(e){
+	e.preventDefault();
+	location.href="myspace.html";
+})
+</script>
+</html>

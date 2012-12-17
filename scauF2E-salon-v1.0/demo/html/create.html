@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>创建新需求</title>
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/index.css" type="text/css" media="all">
+	<script charset="gb2312" src="http://res.nie.netease.com/comm/js/jquery(mixNIE).last.js"></script>
+</head>
+<body>
+	<div class="container nobgwell">
+		<h2 class="pageTitle mb30">网站组提单系统</h2>
+		<h4 class="alert alert-info"><i class="icon-folder-open icon-white"></i>提出需求</h4>
+		<form class="form-horizontal">
+	        <fieldset>
+		        <div class="control-group">
+		        	<label class="control-label">需求名称</label>
+		        	<div class="controls">
+		        		<div class="input-prepend">
+				        	<span class="add-on">梦幻西游</span><input type="text"  id="demandName"  placeholder="需求名称">
+				        </div>
+			        </div>
+		        </div>
+		        <div class="control-group">
+		        	<label class="control-label">项目目的</label>
+		            <div class="controls">
+		              <label class="checkbox inline">
+		                <input type="checkbox" id="inlineCheckbox1" value="option1"> 传播
+		              </label>
+		              <label class="checkbox inline">
+		                <input type="checkbox" id="inlineCheckbox2" value="option2"> 内容介绍
+		              </label>
+		              <label class="checkbox inline">
+		                <input type="checkbox" id="inlineCheckbox3" value="option3"> 形象刷新
+		              </label>
+		                <div class="mt15">
+		        			<label class="">其他：</label>
+		        			<textarea class="input-xlarge span6" id="otherTarget" rows="3" placeholder="上传照片发布微博等等"></textarea>
+		        		</div>
+		            </div>
+		        </div>
+		        <div class="control-group">
+		        	<label class="control-label">项目量级</label>
+		            <div class="controls">
+		            	<div class=" in-bl ml5">
+			              <label class="myInline">浏览量</label>
+			              <select class="wd100">
+			              	<option>千级</option><option>万级</option><option>百万级</option>
+			              </select>
+			          	</div>
+			          	<div class=" in-bl ml5">
+			              <label class="myInline">分享量</label>
+			              <select class="wd100">
+			              	<option>千级</option><option>万级</option><option>百万级</option>
+			              </select>
+			          	</div>
+			          	<div class=" in-bl ml5">
+			              <label class="myInline">参与量</label>
+			              <select class="wd100">
+			              	<option>千级</option><option>万级</option><option>百万级</option>
+			              </select>
+			          	</div>
+		            </div>
+		        </div>	
+		        <div class="control-group">
+		        	<label class="control-label">上线时间</label>
+		        	<div class="controls">
+		        		<input type="text" class="span1" id="year"  placeholder="2012">
+		        		<input type="text" class="span1" id="year"  placeholder="12">
+		        		<input type="text" class="span1" id="year"  placeholder="23">
+		        		<i class="icon-calendar"></i>
+		        	</div>
+		        </div>
+		        <div class="control-group">
+		        	<label class="control-label">目标用户</label>
+		        	<div class="controls">
+		        		<textarea class="input-xlarge span6" id="targetUsers" rows="3" placeholder="100个字内"></textarea>
+		        		<div class="mt15">
+		        			<label class="myInline">主要来源：</label>
+				              <label class="checkbox inline pd0">
+				                <input type="checkbox" id="inlineCheckbox1" value="option1"> 17173
+				              </label>
+				              <label class="checkbox inline pd0">
+				                <input type="checkbox" id="inlineCheckbox2" value="option2"> 官方网站
+				              </label>
+				              <label class="checkbox inline pd0">
+				                <input type="checkbox" id="inlineCheckbox3" value="option3"> YY语言
+				              </label>
+		        		</div>
+		        	</div>
+		        </div>	      
+		        <div class="control-group">
+		        	<label class="control-label">内容概述</label>
+		        	<div class="controls">
+		        		<textarea class="input-xlarge span6" id="contentOverview" rows="3" placeholder="100个字内"></textarea>
+		        	</div>
+		        </div>  
+		        <div class="control-group">
+		        	<label class="control-label">功能需求</label>
+		            <div class="controls">
+		              	<label class="checkbox inline">
+		                	<input type="checkbox" id="inlineCheckbox1" value="option1"> 投票
+		              	</label>
+		              	<label class="checkbox inline">
+		                	<input type="checkbox" id="inlineCheckbox2" value="option2"> 留言
+		              	</label>
+		               	<label class="checkbox inline">
+		                	<input type="checkbox" id="inlineCheckbox3" value="option3"> 抢答
+		               	</label>
+		               	<div class="mt15">
+		        			<label class="">其他：</label>
+		        			<textarea class="input-xlarge span6" id="otherRemand" rows="3" placeholder="上传照片发布微博等等"></textarea>
+		        		</div>
+		            </div>
+		        </div>
+		          <div class="control-group">
+		            <label class="control-label">是否已与接口人沟通</label>
+		            <div class="controls">
+		              <label class="radio inline">
+		                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">是
+		              </label>
+		              <label class="radio inline">
+		                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">否
+		              </label>
+		            </div>
+		          </div>
+		        <div class="control-group">
+		        	<label class="control-label">其他</label>
+		        	<div class="controls">
+		        		<textarea class="input-xlarge span6" id="remarks" rows="3" placeholder="备注一些事项"></textarea>
+		        	</div>
+		        </div>
+	          <div class="form-actions">
+	            <button type="submit" class="btn btn-primary"><i class="icon-ok icon-white"></i>提交</button>
+	            <a class="btn" href="myspace.html"><i class="icon-backward"></i>取消</a>
+	          </div>
+	        </fieldset>
+	      </form>
+	</div>
+</body>
+</html>

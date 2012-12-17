@@ -1,0 +1,33 @@
+
+/*index*/
+body{color: #666;}
+input{outline: none;}
+.pageTitle{text-align: center;font-family: Microsoft YaHei;color: #666;}
+.indexAdvise{text-align: right;}
+.well{background: #f8f8f8;}
+
+/*myspace*/
+.container h4{font-size: 16px;font-weight: bold;background: #4ea6ea;}
+.flr{float: right;}
+.wd100{width:100px;}
+.ml5{margin-left: 5px;}
+.ml30{margin-left: 30px;}
+.ml20{margin-left: 20px;}
+.mt15{margin-top: 15px;}
+.mb0{margin-bottom: 0;}
+.mb15{margin-bottom: 15px;}
+.mb30{margin-bottom: 30px;}
+.ftb{font-weight: bold;}
+.nobgwell .well{background: #fff;border: 1px solid #ddd;border-top: 0;}
+.table thead td{font-weight: bold;}
+.table a{color: #80a6ea;font-weight: bold;color:#777;}
+
+
+
+/*create*/
+.myInline{display: inline;}
+.in-bl{display: inline-block;}
+.form-horizontal .control-label{font-weight: bold;}
+.pdt5{padding-top: 5px;}
+.wd460{width: 460px;}
+.checkbox.pd0{padding-top: 0;}

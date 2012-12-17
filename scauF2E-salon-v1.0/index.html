@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>前端的瑞士军刀</title>
+		<meta name="author" content="Hakim El Hattab">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!--<link href="js/google-code-prettify/prettify2.css" type="text/css" rel="stylesheet" />-->
+		<style type="text/css">
+			.reveal h2,.reveal h4,.reveal p,.reveal ul li{font-family:microsoft YaHei;}
+			.blue{color:#3B759E;}.red{color:#CC9393;}.yellow{color:#E3CEAB;}.green{color: green;}
+			.reveal section img{border:0;}
+			.reveal section .icons img{box-shadow:none;}
+			.reveal code{font-family:consolas,Monaco,monospace;font-size:90%;}
+			
+		</style>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>前端利器</h1>
+					<h3 style="font-family: microsoft YaHei;">——不切糕的瑞士军刀</h3>
+					<p>
+						<small>Share by <a href="http://g7blogs.com">Gse7en</a> / <a href="mailto:gse7en@163.com">gse7en@163.com</a>/<a href="http://g7blogs.com">g7blogs.com</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>开场白</h2>
+					<p>大家好。我是<span class="blue">朱志鹏</span>，菜鸟级前端一枚。</p>
+					<p>热爱前端热爱生活，爱好和平喜欢吐槽。</p>
+					<p>迷恋Javascirpt<span class="red">活泼可爱</span>的特性。</p>
+					<p>喜欢HTML<span class="yellow">稳壮强健</span>的踏实。</p>
+					<p>欣赏CSS<span class="green">风骚多变</span>的表现。</p>
+					<small style="font-family: microsoft YaHei;">
+						Ps:战斗力还是渣滓级，讲错的地方大家拿起砖头使劲地拍吧~
+					</small>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>前端的框架和库</h2>
+						<p>
+							工欲善其事，必先利其器。<br/>有许多伟大的人为我们发明了轮子和组件，于是我们可以站在巨人的肩膀上，打造自己的战车。
+						</p>
+					</section>
+					<section>
+						<h2>等等，我要吐槽一下</h2>
+						<p class="red">IE6怎么还不去死！</p>
+						<p >
+							<img src="images/IE62.jpg" class="fragment roll-in"/>
+							<img src="images/IE61.jpg" class="fragment roll-in" width="302" style="position: relative;top: -17px;"/>
+						</p>
+					</section>
+					<section>
+						<h2>叮当也笑了</h2>
+						<iframe src="http://knb.im/css3/" width="900" height="600" style="overflow-x:hidden;"></iframe>
+					</section>
+					<section>
+						<h2>我们应该用什么？</h2>
+						<small class="blue">苦逼的前端强烈推荐——</small>
+						<p class="icons">
+							<img alt="Chrome" id="logo" src="images/chrome.png" height="50">
+							<img alt="Firefox" id="logo" src="images/ff.png" height="50">
+							<img alt="Opera" id="logo" src="images/op.png" height="50">
+							<img alt="IE10" id="logo" src="images/ie10.jpg" height="50">
+						</p>
+						<p class="blue fragment">喜欢双核的？</p>
+						<p class="fragment roll-in icons">
+							<img alt="Maxthon" id="logo" src="images/mt.png" height="50">
+							<img alt="Liebao" id="logo" src="images/lb.jpg" height="50">
+							<img alt="Sougou" id="logo" src="images/sg.jpg" height="50">
+							<img alt="360" id="logo" src="images/360.jpg" height="50">
+						</p>
+						<small class="fragment roll-in" style="color:red;">嗯，注意将以上的双核浏览器切换成<strong>极速模式</strong>！你懂的。</small>
+					</section>
+				</section>
+				<section class="jquery">
+					<section>
+						<a href="http://jquery.com/" target="_blank">
+							<img src="images/logo_jquery.jpg" width="200">
+						</a>
+						<h2>JQuery——王者地位</h2>
+						<p>在我刚接触前端的时候，JQuery就一直陪伴在我身边。</p>
+						<ul style="font-size:80%;">
+							<li class="fragment roll-in"><span class="green">强大的选择符</span>，只有想不到，没有找不到！</li>
+							<li class="fragment roll-in"><span class="green">合理的封装</span>，AJAX异步？DOM事件绑定？浏览器差异？No Problem！</li>
+							<li class="fragment roll-in"><span class="green">种类齐全的插件</span>，光箱，切换，轮播，延迟加载……堪比菜市场</li>
+						</ul>
+						<p class="fragment roll-in blue">JQuery绝对是你的第一选择！</p>
+					</section>
+					<section>
+						<h2>JQuery语法简介</h2>
+						<p>JQuey的基础语法很简单，$(selector).action()。</p>
+						<pre class="fragment roll-in"><code contenteditable id="helloIntro" class="">$(function(){
+  $("p").addClass("ohmy").show("slow");//为段落增加"ohmy"的类，然后显示
+  $(this).hide() //隐藏当前元素
+  $("p").hide() //隐藏所有段落
+  $("p.test").hide() //隐藏所有 class="test" 的段落
+  $("#test").hide() //隐藏所有 id="test" 的元素
+  $("p").bind("click", function(){
+    alert($(this).text());
+  }); //点击段落弹出该段落的文本
+})</code></pre>
+					</section>
+					<section>
+						<h2>JQuery的插件</h2>
+						<small class="green">入门级插件演示</small>
+						<pre><code class="javascript">(function($) {         
+  $.fn.beatIE6 = function() {       
+    return this.each(function() {      
+      var _self = $(this);              
+      _self.html("IE6怎么还活着？");      
+    });      
+  };       
+})(jQuery);
+$("#hey").beatIE6();
+</code></pre>
+<p>JQuery的插件万万千，可谓是前端界杀人越货，居家旅行必备！</p>
+					</section>
+				</section>
+				<section class="zepto">
+					<section>
+						<a href="http://zeptojs.com/" target="_blank">
+							<img src="images/logo_zepto.jpg" width="200">
+						</a>
+						<h2>Zepto——移动端的JQ</h2>
+						<p>只有一个关键字。轻量！8KB的大小。</p>
+						<ul style="font-size:80%;">
+							<li class="fragment roll-in"><span class="green">类似JQuery的选择符</span>，用惯JQ可以轻易上手。</li>
+							<li class="fragment roll-in"><span class="green">合理的删减</span>，只保留了基本DOM操作和常用的组件。</li>
+							<li class="fragment roll-in"><span class="green">移动端的事件</span>，swipe，tap，doubleTap和longTap等常见的操作。</li>
+						</ul>
+						<p class="fragment roll-in blue">如果你使用过jQuery，那么使用zepto绝对很简单。</p>
+					</section>
+					<section>
+						<h2>移动版的JQuery</h2>
+						<pre class="fragment roll-in"><code class="javascript">$('#zeptoIntro').html("Hey!Hello World!");
+$('#items li').swipe(function(){
+  $('.delete').hide()
+  $('.delete', this).show();
+});
+$.ajax({
+  type: 'POST',
+  url: '/project',
+  data: { name: 'g7blogs.com' },
+  dataType: 'json',
+  success: function(data){
+    //成功时执行的方法
+  },
+  error: function(xhr, type){
+    alert('error!')
+  }
+});</code></pre>
+					</section>
+				</section>
+				<section class="YUI">
+					<section>
+						<a href="http://yuilibrary.com/yui/docs/api/" target="_blank"><img src="images/logo_yui.jpg" width="200"></a>
+						<h2>YUI——重量级鼻祖</h2>
+						<p>出自雅虎的精品。我只想说：大，全，精</p>
+						<ul style="font-size:80%;">
+							<li class="fragment roll-in"><span class="green">模块化</span>，类似于点菜的形式。粒子化程度很高，模块都是按需加载。</li>
+							<li class="fragment roll-in"><span class="green">文档齐全</span>，看到你不想看为止。社区繁荣，不用担心查无所需。</li>
+							<li class="fragment roll-in"><span class="green">强调代码重用</span>，各种公共基类、插件、扩展。</li>
+						</ul>
+						<p class="fragment roll-in blue">YUI绝对是构建前端富应用的重型武器。</p>
+					</section>
+					<section>
+						<h2>YUI的组件</h2>
+						<img src="images/yui.jpg" width="900"/>
+					</section>
+					<section>
+						<h2>YUI3.X的语法</h2>
+						<small>当然要先引用，&lt;script src="http://yui.yahooapis.com/3.8.0/build/yui/yui-min.js"&gt;&lt;/script&gt;</small>
+						<pre><code class="javascript">YUI().use("node", "event",function(Y) {
+var contentNode = Y.Node.create('&lt;div&gt;'),
+    listNode    = Y.Node.create('&lt;ul&gt;'),
+    footerNode  = Y.Node.create('&lt;footer&gt;');
+    contentNode.setHTML('&lt;p&gt;Node makes it easy to add content.&lt;/p&gt;');
+    listNode.insert('&lt;li&gt;Buy milk&lt;/li&gt;');
+    footerNode.prepend('&lt;h2&gt;Footer Content&lt;/h2&gt;');
+    Y.all('.important').addClass('highlight');
+    Y.one('#close-button').on('click', function () {
+        contentNode.hide();
+    });
+});	</code></pre>
+					</section>
+					<section>
+						<h2>YUI3.X的语法</h2>
+						<p>UI的效果</p>
+						<pre><code class="javascript">YUI().use('transition', function (Y) {
+    // Fade away.
+    Y.one('#fademe').transition({
+        duration: 1, // seconds
+        opacity : 0
+    });
+    // Shrink to nothing.
+    Y.one('#shrinkme').transition({
+        duration: 1, // seconds
+        width   : 0,
+        height  : 0
+    });
+});</code></pre>
+					</section>
+				</section>
+				<section class="more">
+					<h2>还有许多</h2>
+					<p>Prototype、ExtJS、DoJo、MooTools、qooxdoo、script.aculo.us……</p>
+					<p>其实这么多JS的库，都是闻其名，而不闻其详。选择最适合自己的，最适合项目开发的，就是最好的。</p>
+				</section>
+				<section class="bootstrap">
+					<section >
+						<a href="http://yuilibrary.com/yui/docs/api/" target="_blank"><img src="images/logo_bootstrap.jpg" width="200"></a>
+						<h2>Bootstrap</h2>
+						<h4>——来自Twitter的礼物</h4>
+						<p class="fragment roll-in red">天生木有设计的触觉？堆出来的界面连自己都感到绝望?</p>
+						<p class="fragment roll-in green">太懒了？不想自己写界面？切图太麻烦？</p>
+						<p class="fragment roll-in blue">对界面设计不会再爱了。直到我遇上Bootstrap！</p>
+					</section>
+					<section>
+						<h2>爱需要理由？</h2>
+						<img src="images/boot.jpg">
+					</section>
+				</section>
+				<section class="china">
+					<section >
+						<h2>国内互联网公司的武器</h2>
+						<ul>
+							<li class="fragment roll-in red"><img src="images/qq.jpg" style="position: relative;top: 25px;" height="45"/>喜闻乐见的企鹅军</li>
+							<li class="fragment roll-in red"><img src="images/alibba.jpg" style="position: relative;top: 25px;"  height="45"/>财大技粗的阿里系</li>
+							<li class="fragment roll-in red"><img src="images/baidu.jpg" style="position: relative;top: 25px;" height="45"/>测试网络专用的百度</li>
+							<li class="fragment roll-in red"><img src="images/net_png.png" style="position: relative;top: 25px;" height="45"/>二楼神回复的网易</li>
+							<li class="fragment roll-in red"><img src="images/douban.jpg" style="position: relative;top: 25px;" height="45"/>文艺聚居地的豆瓣</li>			
+							<li class="fragment roll-in red"><img src="images/sina.jpg" style="position: relative;top: 25px;" height="45"/>愤青出没的新浪微博</li>					
+						</ul>
+					</section>
+					<section>
+						<p>哇~虽不明但觉厉的赶脚。其实我也木使用过，来看看网上的点评一览究竟吧</p>
+						<small>Ps:非官方指引，意见仅供参考</small>
+					</section>
+					<section class="TX">
+						<h2>腾讯——JX</h2>
+						<a href="http://alloyteam.github.com/JX/#home">
+							<img src="images/jx.jpg"/>
+						</a>
+						<p>理念在介绍里面写的很详细，代码清晰，注释丰富，可读性很好，但只有文档没有实例。</p>
+						<p>比较传统的大块头框架，本质上来说还是一堆工具方法和对象的堆积，提供了很基本的模块化的开发方式，但没有模块间的依赖关系支持。</p>
+					</section>
+					<section>
+						<h2>阿里——Arale</h2>
+						<a href="http://aralejs.org/">
+							<img src="images/arale.jpg"/>
+						</a>
+						<p>
+							基于sea.js，提供基于CMD的较成熟的模块依赖管理和文件加载，同时提供包管理/打包工具spm。
+						<br/>提供基础模块如class, event, widget等等，也有常用工具模块和ui组件。解耦做的较好。比较注重开放和易用性，鼓励使用和开发第三方模块。
+						<br/>阿里以前有一个类YUI的KISSY，Arale则是采用了全新的架构思想。文档正在迅速完善中。
+						</p>
+					</section>
+					<section>
+						<h2>网易——NEJ</h2>
+						<a href="http://nej.netease.com/">
+							<img src="images/nej.jpg"/>
+						</a>
+						<p>
+							很大很全，功能很多，也提供打包工具，而且针对不同的浏览器内核进行了适配。
+							<br/>但不得不吐槽的是NEJ是国内这些开源框架里最不友好的一个，因为它太过强调“约定优于配置”，对使用者施加了太多的约束。一旦使用NEJ，你就必须跟着它所规定的一切来。
+						</p>
+					</section>
+					<section>
+						<h2>豆瓣——ozJS</h2>
+						<a href="http://ozjs.org/mo/">
+							<img src="images/ozjs.jpg" style="float:left;"/>
+						</a>
+						<p>
+							和Arale有些类似，同样提供一个模块依赖管理的微内核，基于此来构建一套模块化的框架。兼容CMD, AMD和基本的闭包函数模块。
+<br/>提供预处理/打包工具ozma，以及一系列常用模块，比如语言增强，事件系统，url解析，dom处理，动画等等。
+<br/>前身是豆瓣开发阿尔法城的时候使用的框架，现在还在加强通用性的过程中，一些模块还在开发，文档也还不是很完整，但在解耦和开放性上做的不错。
+						</p>
+					</section>
+					<section>
+						<h2>百度——Tangram</h2>
+						<a href="http://tangram.baidu.com/">
+							<img src="images/tr.jpg"/>
+						</a>
+						<p>
+							基本上就是个百度版jQuery，2.0版本使用链式API，更像了。
+配套的还有UI库Magic和模版引擎BaiduTemplate（和ejs很像）
+						</p>
+					</section>
+					<section>
+						<h2>新浪——STK(未开源)</h2>
+
+							<img src="images/stk.jpg"/>
+						<p>
+							在STK这个namespace下定义了reigister方法用来添加新的模块，但每个模块基本上就是一个闭包函数，没有依赖关系支持。和腾讯的JX相似，但更简单。
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>前端富应用——MVC框架</h2>
+						<p class="fragment">MVC是一个框架模式，它强制性的使应用程序的输入、处理和输出分开。使用MVC应用程序被分成三个核心部件：模型、视图、控制器。它们各自处理自己的任务。
+						</p>
+					</section>
+					<section>
+						<h2>M——Model模型</h2>
+						<p class="fragment"><span class="blue">模型表示企业数据和业务规则。</span><br/>在MVC的三个部件中，模型拥有最多的处理任务。被模型返回的数据是中立的，就是说模型与数据格式无关，这样一个模型能为多个视图提供数据，由于应用于模型的代码只需写一次就可以被多个视图重用，所以减少了代码的重复性。
+						</p>
+					</section>
+					<section>
+						<h2>V——View视图</h2>
+						<p class="fragment"><span class="blue">视图是用户看到并与之交互的界面。</span><br/>对老式的Web应用程序来说，视图就是由HTML元素组成的界面，在新式的Web应用程序中，HTML依旧在视图中扮演着重要的角色，但一些新的技术已层出不穷，它们包括Adobe Flash和象XHTML，XML/XSL，WML等一些标识语言和Web services。<br/>
+　　MVC好处是它能为应用程序处理很多不同的视图。在视图中其实没有真正的处理发生，作为视图来讲，它只是作为一种输出数据并允许用户操纵的方式。
+						</p>
+					</section>
+					<section>
+						<h2>C——控制器</h2>
+						<p class="fragment"><span class="blue">控制器接受用户输入并调用模型和视图去完成用户需求。</span><br/>所以当单击Web页面中的超链接和发送HTML表单时，控制器本身不输出任何东西和做任何处理。它只是接收请求并决定调用哪个模型构件去处理请求，然后再确定用哪个视图来显示返回的数据。
+						</p>
+					</section>
+					<section>
+						<h2>前端MVC应用有哪些</h2>
+						<p>
+							<a href="http://note.163.com/" target="_blank"><img src="images/note.jpg"></a>
+							<a href="http://web.qq.com" target="_blank"><img src="images/q+.jpg"></a>
+							<a href="http://qzone.qq.com" target="_blank"><img src="images/qqz.png"></a>
+							<a href="http://douban.fm" target="_blank"><img src="images/doubanfm.png"></a>
+							<a href="http://gmail.com" target="_blank"><img src="images/gmail.jpg" height="63"></a>
+						</p>
+						<p>…………</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2><img src="images/bb.jpg"/></h2>
+						<p>Backbone提供了Models, Collections, Views。<br/>Models 用来创建数据，校验数据，绑定事件，存储数据到服务器端；Collections 包含你创建的 functions；Views 用来展示数据。如此这般，在前端也做到了数据和显示分离。</p>
+					</section>
+					<section>
+						<h2>Backbone.Model</h2>
+						<small>模型是所有Javascript应用程序的核心,包括交互数据及相关的大量逻辑： 转换、验证、计算属性和访问控制。你可以用特定的方法扩展Backbone.Model，模型 也提供了一组基本的管理变化的功能。</small>
+						<pre><code class="javascript">App.Todo=Backbone.Model.extend({
+  defaults:{
+	title: "empty todo...",
+	done: false;
+  },
+  toggle:function(){
+	this.save({done:!this.get("done")});
+  },
+  initialize: function() {
+	if (!this.get("title")) {
+	  this.set({"title": this.defaults().title});
+	}
+  }
+});</code></pre>
+					</section>
+					<section>
+						<h2 style="white-space:nowrap;">Backbone.Collection</h2>
+						<small>集合是模型的有序组合，我们可以在集合上绑定 "change" 事件，从而当集合中的模型发生变化时获得通知，集合也可以监听 "add" 和 “remove" 事件， 从服务器更新，并能使用 Underscore.js 提供的方法</small>
+						<pre><code class="javascript">var Library = Backbone.Collection.extend({
+  model: Book
+});
+var NYPL = new Library;
+var othello = NYPL.create({
+  title: "Backbone.js API 中文手册",
+  author: "一回（www.csser.com）"
+});	</code></pre>
+					</section>
+					<section>
+						<h2 style="white-space:nowrap;">Backbone.Events</h2>
+						<small>obj.bind(event, callback) bind方法前面是事件名，后面是回调函数。bind可以将回调函数绑定到对象上，事件触发时便会执行回调函数。另外，如果事件很多，可以给事件加上命名空间，例如"poll:start", "change:selection"。</small>
+						<pre><code class="javascript">var obj = {};
+_.extend(obj, Backbone.Events);
+  obj.bind('data', function(data) {
+  console.log('Receive Data: ' + data);
+});
+obj.trigger('data', 'I am an Backbone event');
+obj.unbind('data');
+obj.trigger('data', 'I am an Backbone event');</code></pre>
+					</section>
+					<section>
+						<h2 style="white-space:nowrap;">Backbone.Controller</h2>
+						<small>由于富Ajax的网站大多用带#的url来识别抓取服务器内容，因此Backbone也提供了前端的url#fragment的路由支持，并且可以把他们绑定到Action和Event中去。
+<br/>注意：在使用前端路由的功能之前，一定要调用一次Backbone.history.start()。</small>
+<pre><code class="javascript">App.Controllers.Statuses = Backbone.Controller.extend({
+    routes: {
+        "": "home",
+        "!/comments": "comments",
+        "!/:uid": "profile",
+        "!/:uid/followers": "followers",
+        "!/:uid/status/:id": "status",
+    },
+    initialize: function(){...}
+    home: function(){...}
+    comments: function() {...}
+    profile: function(a) {...}
+    status: function(a, b) {...}
+    followers: function(a) {...}
+});</code></pre>
+					</section>
+					<section>
+						<h2>Backbone.View</h2>
+						<small>View并不操作html或者css，所有的操作留给了各种各样JS的模板库。</small>
+						<pre><code class="javascript">App.Views.UserInfo = Backbone.View.extend({
+    model: User,
+    className: "components cross",
+    template: $("#user-info-template").html(),
+    initialize: function() {
+        _.bindAll(this, "render");
+        this.model.bind("change", this.render)
+    },
+    render: function() {
+        var a = this.model;
+        $(this.el).html(Mustache.to_html(this.template, a.toJSON()));
+        $(this.el).find(".days").html(function() {
+            return getDays(a.get("created_at"));
+        });
+        return this;
+    }
+});	</code></pre>
+					</section>
+				</section>
+				<section>
+					<h2 style="white-space:nowrap;">Simple Backbone App</h2>
+					<iframe src="http://todomvc.com/architecture-examples/backbone/" width="900" height="500"></iframe>
+				</section>
+				<section>
+					<section>
+						<h2><img src="images/ko.jpg"></h2>
+						<p>Knockout是一个轻量级的UI类库，通过应用MVVM模式使JavaScript前端UI简单化。<br/>Knockout是一个以数据模型(data model)为基础的能够帮助你创建富文本，响应显示和编辑用户界面的JavaScript类库。<br/>任何时候如果你的UI需要自动更新(比如：更新依赖于用户的行为或者外部数据源的改变)，KO能够很简单的帮你实现并且很容易维护。</p>
+					</section>
+					<section>
+						<h2>什么是MVVM</h2>
+						<p class="blue">MVVM，就是Model，View，ViewModel。其广泛应用于微软的WPF、Siverlight、WinPhone开发中。</p>
+						<ul>
+							<li>Model就是对数据的抽象，数据的封装。比如，Person。</li>
+							<li>View就是UI表现层，提供与终端用户的交互。比如，一个用户录用界面。</li>
+							<li>ViewModel是这种模式的核心，提供了一个Model与View之间的桥梁。它应该提供了View中所有用户可能的操作对应的处理，以及该处理能去Model进行必要的操作，或者缓存该处理结果，等待下次使用。</li>
+						</ul>
+					</section>
+					<section>
+						<h2>N久前写的一个小Demo</h2>
+						<iframe width="900" height="500" src="http://jsfiddle.net/gse7en2012/84tVs/1/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2><img src="images/angl.jpg"></h2>
+
+						<p class="red">Are you a JS ninja? Would you like to become superhero, fight evil, and change the way web apps are written? Awesome, because we are hiring!</p>
+						<small class="green">From <a href="http://angularjs.org/">angularjs.org</a></small>
+					</section>
+					<section>
+						<p>AngularJS通过为开发者呈现一个更高层次的抽象来简化应用的开发。如同其他的抽象技术一样，这也会损失一部分灵活性。换句话说，并不是所有的应用都适合用AngularJS来做。AngularJS主要考虑的是构建CRUD应用。幸运的是，至少90%的WEB应用都是CRUD应用。</p>
+						<small class="red fragment" >但是要了解什么适合用AngularJS构建，就得了解什么不适合用AngularJS构建。</small>
+						<p class="blue fragment">如游戏，图形界面编辑器，这种DOM操作很频繁也很复杂的应用，和CRUD应用就有很大的不同，它们不适合用AngularJS来构建。像这种情况用一些更轻量、简单的技术如jQuery可能会更好。</p>
+					</section>
+					<section>
+						<h2>todo.html</h2>
+						<pre><code class="xml">&lt;h2&gt;Todo&lt;/h2&gt;
+    &lt;div ng-controller="TodoCtrl"&gt;
+      &lt;span&gt;{{remaining()}} of {{todos.length}} remaining&lt;/span&gt;
+      [ &lt;a href="" ng-click="archive()"&gt;archive&lt;/a&gt; ]
+      &lt;ul class="unstyled"&gt;
+        &lt;li ng-repeat="todo in todos"&gt;
+          &lt;input type="checkbox" ng-model="todo.done"&gt;
+          &lt;span class="done-{{todo.done}}"&gt;{{todo.text}}&lt;/span&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;form ng-submit="addTodo()"&gt;
+        &lt;input type="text" ng-model="todoText"  size="30"
+               placeholder="add new todo here"&gt;
+        &lt;input class="btn-primary" type="submit" value="add"&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;</code></pre>
+					</section>
+					<section>
+						<h2>todo.js</h2>
+						<pre><code class="javascript" style="max-height:550px;">function TodoCtrl($scope) {
+  $scope.todos = [
+    {text:'learn angular', done:true},
+    {text:'build an angular app', done:false}];
+  $scope.addTodo = function() {
+    $scope.todos.push({text:$scope.todoText, done:false});
+    $scope.todoText = '';
+  };
+  $scope.remaining = function() {
+    var count = 0;
+    angular.forEach($scope.todos, function(todo) {
+      count += todo.done ? 0 : 1;
+    });
+    return count;
+  };
+  $scope.archive = function() {
+    var oldTodos = $scope.todos;
+    $scope.todos = [];
+    angular.forEach(oldTodos, function(todo) {
+      if (!todo.done) $scope.todos.push(todo);
+    });
+  };
+}</code></pre>
+					</section>
+					<section>
+						<h2>最后的DEMO</h2>
+						<iframe src="demo/a-todo.html" width="400" height="250"></iframe>
+						<small class="blue">关于AngularJS，我自己也是正在学习中，在此基础上开发一个核心为CRUD的web网站。相比起KnockoutJS，个人更喜欢AngularJS的data-binding形式。而且AngularJS的路由容易上手。<br/>AngularJS有一个关键字，$inject——依赖注入。通过ng-app的tag调用，能很方便地操作View，很简单就实现了data的双向绑定。</small>
+					</section>
+				</section>
+				<section>
+					<h2>我正在摸索的</h2>
+					<p>
+						<img src="images/ang.jpg" height="100"/>+<img src="images/logo_bootstrap.jpg" height="100"/>+<img src="images/slim.jpg" height="100"/>=My WebApp
+					</p>
+				</section>
+				<section>
+					<img src="images/saike.jpg" width="900"/>
+				</section>
+				<section>
+					<section>
+						<h2>还有许许多多的……</h2>
+						<p>Spine,Emberjs,Sammyjs,GWT,Knockbackjs,Batman.js……其实都是大同小异的，主要是理解了自己项目的整体架构和开发思路，选择哪个框架作为你的武器，就是萝卜白菜各人所爱了。</p>
+					</section>
+					<section>
+						<p>咦，其实最强大的武器是F12！没错，在Chrome下一个F12，天下我有。</p>
+					</section>
+					<section>
+						<p>还有许多我未来得及提到的，例如JS的模块化SeaJS，Nodejs开发，JS调试，HTML5在移动端的应用Phonegap&amp;Appcan……</p>
+						<p>前端开发就像一个<span class="red">潘多拉魔盒</span>，里面充满着<span class="blue">神奇的美丽</span>，也布满着<span class="green">坑爹的陷阱</span>。从我接触到这个盒子的时候，我就迷恋上了，一路在探索学习。虽然不是什么大神，也不是什么牛人，但我充满着热情，<span class="yellow">我热爱这个圈子</span>。</p>
+						<p>How about you?</p>
+					</section>
+				</section>
+				<section>
+					<h1>THE END</h1>
+					<h3>Q&A</h3>
+					<p class="blue">谈谈人生谈谈理想也可以哦~</p>
+				</section>
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<!--<script type="text/javascript" src="js/google-code-prettify/prettify.js"></script>-->
+
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				theme: Reveal.getQueryHash().theme, 
+				transition: 'zoom',
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+
+	</body>
+</html>
